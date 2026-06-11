@@ -24,4 +24,10 @@ jobs:
         mv ../index.html www/index.html
         cordova platform add android
         cordova build android --release
+
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Ren-AI-APK
+        path: ren-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
         
